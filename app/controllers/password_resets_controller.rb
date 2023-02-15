@@ -35,6 +35,8 @@ class PasswordResetsController < ApplicationController
     else
       flash[:error] = "There was an issue sending password reset email to #{params[:email]}".html_safe unless params[:email].nil?
       flash[:error] = "There was an issue sending password reset email to #{params[:email]}".html_safe unless params[:email].nil?
+      flash[:error] = "There was an issue sending password reset email to #{params[:email]}".html_safe unless params[:email].nil?
+      flash[:error] = "There was an issue sending password reset email to #{params[:email]}".html_safe unless params[:email].nil?
     end
   end
 
