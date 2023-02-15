@@ -6,14 +6,13 @@ class BenefitFormsController < ApplicationController
   end
 
   def download
-   redirect_to user_benefit_forms_path(user_id: current_user.id)
-#    begin
-#      path = params[:name]
-#      file = params[:type].constantize.new(path)
-#      send_file file, disposition: "attachment"
-#    rescue
-#      redirect_to user_benefit_forms_path(user_id: current_user.id)
-#    end
+   begin
+     path = params[:name]
+     file = params[:type].constantize.new(path)
+     send_file file, disposition: "attachment"
+   rescue
+     redirect_to user_benefit_forms_path(user_id: current_user.id)
+   end
   end
 
   def upload
