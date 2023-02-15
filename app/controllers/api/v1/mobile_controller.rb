@@ -13,12 +13,13 @@ class Api::V1::MobileController < ApplicationController
   end
 
   def index
-    if params[:class]
-      model = params[:class].classify.constantize
-      respond_with model.all.to_json
-    else
-      respond_with nil.to_json
-    end
+    respond_with nil.to_json
+#     if params[:class]
+#       model = params[:class].classify.constantize
+#       respond_with model.all.to_json
+#     else
+#       respond_with nil.to_json
+#     end
   end
 
   private
